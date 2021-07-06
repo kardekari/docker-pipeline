@@ -8,4 +8,8 @@ echo "hi from bash script"
 
 echo $SSH_KEY
 
+echo $SSH_KEY >> sshfile
+
+cat  sshfile
+
 

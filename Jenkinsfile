@@ -18,9 +18,17 @@ pipeline {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
-    stage('Push') {
+    // stage('Push') {
+    //   steps {
+    //     sh 'docker push abdullahcodes/docker-test:latest'
+    //   }
+    // }
+
+    stage('Deploy'){
       steps {
-        sh 'docker push abdullahcodes/docker-test:latest'
+         sh '''#!/bin/bash
+                 echo "hello world" 
+         '''
       }
     }
   }

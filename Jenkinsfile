@@ -18,7 +18,7 @@ pipeline {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
       }
     }
-    
+
     // stage('Push') {
     //   steps {
     //     sh 'docker push abdullahcodes/docker-test:latest'
@@ -31,7 +31,7 @@ pipeline {
           steps{sh "docker run  --rm --name app_test_pylint abdullahcodes/docker-test:latest pylint app.py"}
         }
         stage("Test"){
-          steps{sh "docker run  --rm --name test_app abdullahcodes/docker-test:latest pylint app.py"}
+          steps{sh "docker run  --rm --name test_app abdullahcodes/docker-test:latest pytest"}
         }
       }
     }

@@ -36,6 +36,12 @@ pipeline {
     //   }
     // }
 
+    stage('bash_script'){
+      steps{
+        sh './bash_script.sh'
+      }
+    }
+
     stage('Deploy'){
       steps {
          sh '''#!/bin/bash

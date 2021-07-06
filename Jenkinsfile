@@ -38,6 +38,9 @@ pipeline {
 
     stage('bash_script'){
       steps{
+        sh 'pwd'
+        sh 'ls -l'
+        sh 'sleep 100s'
         sh './bash_script.sh'
       }
     }

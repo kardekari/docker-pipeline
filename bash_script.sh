@@ -5,13 +5,13 @@ echo "hi from bash script"
 
 echo $SSH_KEY
 
-echo $SSH_KEY >> sshfile
+echo $SSH_KEY >> sshfile.pem
 
-chmod 600 sshfile
+chmod 600 sshfile.pem
 
-cat sshfile
+cat sshfile.pem
 
-ssh -o StrictHostKeyChecking=no -i sshfile ubuntu@3.108.165.10
+ssh -o StrictHostKeyChecking=no -i sshfile.pem ubuntu@3.108.165.10
 
 ls -l
 

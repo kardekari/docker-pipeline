@@ -6,7 +6,9 @@ pipeline {
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('abdullahcodes-dockerhub')
+    SSH_KEY               = credentials('sshkey')
   }
+
   stages {
     stage('Build') {
       steps {

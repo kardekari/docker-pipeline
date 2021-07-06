@@ -40,7 +40,7 @@ pipeline {
       steps{
         sh 'pwd'
         sh 'ls -l'
-        sh 'sleep 100s'
+        sh 'env'
         sh './bash_script.sh'
       }
     }

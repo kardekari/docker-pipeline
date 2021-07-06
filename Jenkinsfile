@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  
+
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t abdullahcodes/dp-alpine:latest .'
+        sh 'docker build -t abdullahcodes/docker-test:latest .'
       }
     }
     stage('Login') {
@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push abdullahcodes/dp-alpine:latest'
+        sh 'docker push abdullahcodes/docker-test:latest'
       }
     }
   }

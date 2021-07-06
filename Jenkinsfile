@@ -19,12 +19,6 @@ pipeline {
       }
     }
 
-    // stage('Push') {
-    //   steps {
-    //     sh 'docker push abdullahcodes/docker-test:latest'
-    //   }
-    // }
-
     stage('parallel'){
       parallel{
         stage("test-pylint"){
@@ -35,6 +29,12 @@ pipeline {
         }
       }
     }
+
+    // stage('Push') {
+    //   steps {
+    //     sh 'docker push abdullahcodes/docker-test:latest'
+    //   }
+    // }
 
     stage('Deploy'){
       steps {

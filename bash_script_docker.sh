@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-echo "docker bash script"
+echo "ec2 bash script"

@@ -11,9 +11,8 @@ echo $SSH_KEY
 
 # cat sshfile
 
-./bash_script_docker.sh
 
-ssh -o StrictHostKeyChecking=no -i $SSH_KEY ubuntu@3.108.165.10
+ssh -o StrictHostKeyChecking=no -i $SSH_KEY ubuntu@3.108.165.10 'bash -s' < ./bash_script_docker.sh
 
 ls -l
 

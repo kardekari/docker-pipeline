@@ -38,22 +38,15 @@ pipeline {
     //   }
     // }
 
-    stage('bash_script'){
+    stage('Deploy'){
       steps{
-        sh 'pwd'
-        sh 'ls -l'
-        sh 'env'
+        // sh 'pwd'
+        // sh 'ls -l'
+        // sh 'env'
         sh './bash_script.sh'
       }
     }
 
-    stage('Deploy'){
-      steps {
-         sh '''#!/bin/bash
-                 echo "hello world" 
-         '''
-      }
-    }
   }
   post {
     always {

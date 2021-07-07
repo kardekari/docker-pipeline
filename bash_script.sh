@@ -13,7 +13,7 @@ echo $SSH_KEY
 
 
 
-ssh -o StrictHostKeyChecking=no -i $SSH_KEY ubuntu@3.108.165.10
+ssh -t -t -o StrictHostKeyChecking=no -i $SSH_KEY ubuntu@3.108.165.10
 
 ls -l
 
